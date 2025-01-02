@@ -13,6 +13,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install deps
-        run: pnpm install
+        run: npm install
       - name: Build project
-        run : pnpm run build
+        run : npm run build

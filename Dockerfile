@@ -3,9 +3,9 @@ FROM node:alpine as build
 WORKDIR /app
 
 COPY package.json package.json
-RUN npm install
+RUN pnpm install
 COPY . .
-RUN npm run build
+RUN pnpm run build
 
 FROM nginx:stable-alpine
 
